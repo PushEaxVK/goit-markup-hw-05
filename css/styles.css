@@ -41,6 +41,10 @@ button {
   font-size: inherit;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   max-width: 1158px;
   padding-left: 15px;
@@ -262,7 +266,6 @@ button {
   font-weight: 500;
   letter-spacing: 0.04em;
   color: #fff;
-  cursor: pointer;
   line-height: 1.5;
 
   border-radius: 4px;
@@ -479,6 +482,83 @@ button {
   background-color: #31d0aa;
 }
 
+.footer-soc-box {
+  margin-right: 80px;
+}
+
+/* footer form */
+
+.footer-form-box {
+}
+
+.footer-form-text {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.footer-form {
+  display: flex;
+}
+
+.footer-input {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: #fff;
+  margin-right: 24px;
+}
+
+.footer-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.footer-button {
+  width: 165px;
+  height: 40px;
+  border-radius: 4px;
+  padding: 8px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+
+  background-color: #4d5ae5;
+  border: none;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+}
+
+.footer-button:hover,
+.footer-button:focus {
+  background-color: #404bbf;
+}
+
+.footer-icon {
+  fill: #fff;
+}
+
 /* --- Modal --- */
 
 .backdrop {
@@ -531,6 +611,10 @@ button {
 
 .close-icon {
   fill: #2e2f42;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 
 .modal-close {
@@ -546,7 +630,21 @@ button {
   margin-left: auto;
   margin-bottom: 24px;
 
-  cursor: pointer;
+  transition-property: background-color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.modal-close:hover .close-icon,
+.modal-close:focus .close-icon {
+  fill: #fff;
 }
 
 .modal-text {
@@ -573,11 +671,20 @@ button {
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
-  cursor: pointer;
 
   margin-left: auto;
   margin-right: auto;
   display: block;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+}
+
+.modal-send:hover,
+.modal-send:focus {
+  background-color: #404bbf;
 }
 
 .modal-form {
@@ -597,10 +704,21 @@ button {
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.04em;
+
+  outline: none;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 
-.modal-input:focus-within {
+.modal-input:focus {
   border: 1px solid #4d5ae5;
+}
+
+.modal-input:focus + .modal-icon {
+  fill: #4d5ae5;
 }
 
 .modal-comment {
@@ -616,9 +734,19 @@ button {
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.04em;
-  /* color: #8e8f99; */
 
   margin-bottom: 16px;
+
+  outline: none;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+}
+
+.modal-comment:focus {
+  border: 1px solid #4d5ae5;
 }
 
 .modal-comment::placeholder {
@@ -653,6 +781,11 @@ button {
   top: 50%;
   transform: translateY(-50%);
   fill: #2e2f42;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 
 .checkbox-label {
