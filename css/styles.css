@@ -688,7 +688,7 @@ button {
 
 .modal-send {
   border-radius: 4px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   padding: 16px 32px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -806,6 +806,9 @@ button {
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: var(--primary-brand-color);
+
+  display: inline-block;
+  margin-left: 4px;
 }
 
 .modal-icon-container {
@@ -840,18 +843,19 @@ button {
 }
 
 .modal-custom-checkbox {
+  display: inline-flex;
   width: 16px;
   height: 16px;
   border-radius: 2px;
   border: 1px solid var(--modal-overlay-color);
-  display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
   margin-right: 8px;
-  transition: background-color var(--transition-duration) var(--timing-function),
-    border var(--transition-duration) var(--timing-function),
-    fill var(--transition-duration) var(--timing-function);
+  transition-property: background-color, border, fill;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--timing-function);
+  transition-delay: 0;
 }
 
 .modal-checkbox-icon {
