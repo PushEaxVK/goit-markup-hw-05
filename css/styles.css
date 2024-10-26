@@ -502,6 +502,7 @@ button {
 
 .footer-form {
   display: flex;
+  gap: 24px;
 }
 
 .footer-input {
@@ -512,7 +513,7 @@ button {
   padding: 8px 16px;
   background-color: transparent;
   color: #fff;
-  margin-right: 24px;
+  /* margin-right: 24px; */
 }
 
 .footer-input::placeholder {
