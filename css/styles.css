@@ -506,6 +506,11 @@ button {
 
 /* footer form */
 
+.footer-form-box {
+  min-width: 453px;
+  min-height: 80px;
+}
+
 .footer-form-text {
   margin-bottom: 16px;
   font-weight: 500;
